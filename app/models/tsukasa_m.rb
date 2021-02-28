@@ -1,0 +1,2 @@
+class TsukasaM < ApplicationRecord
+end
