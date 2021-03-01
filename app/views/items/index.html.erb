@@ -1,1 +1,57 @@
-11111
+
+<header class="header">
+  <div class="header__top">
+    <h1 class="header__top__left">Tsukasa Real Estate Co. Ltd</h1>
+    <div class="header__top__right">
+     <div class="header__top__right__info">
+      株式会社司不動産<br>TEL: 087-823-5656<br>電話受付:10:00~17:00
+     </div>
+     <a class="header__top__right__request" href="#">お問い合わせ</a>
+    </div>
+  </div>
+  <div class="header__bottom">
+   <a class="header__bottom__info" href="#">会社概要</a>
+   <a class="header__bottom__ask" href="#">お問い合わせ</a>
+  </div>
+</header>
+<div class="main">
+  <div class="main__comp">
+    <div class="main__comp__image">
+      <%= image_tag "companyimage.png" %>
+    </div>
+    <div class="main__comp__info">
+      <h2 class="main__comp__info__title">地元に愛され30年</h2>
+      <p class="main__comp__info__sub">こだわりのノウハウ『プロフェッショナル不動産コンサルディング』</p>
+      <p class="main__comp__info__comment">香川県全域、高松市を中心に中国・四国地方で土地、住宅、事務所、店舗、工場、倉庫、駐車場の売買仲介や企画開発、管理、不動産運用ならびに相続・税務上の不動産コンサルディングを長年行なっております。</p>
+    </div>
+  </div>
+  <div class="main__bar">
+    Rent / Sale
+  </div>
+  <div class="main__listing">
+    <div class="main__listing__search">
+      <label class="main__listing__search__title">Search / 検索</label>
+      <div class="main__listing__search__tab">
+        <div class="main__listing__search__tab__rent">Rent</div>
+        <div class="main__listing__search__tab__sale">Sale</div>
+      </div>
+      <div class="main__listing__search__area">
+        <label class="main__listing__search__area__title">エリア</label>
+        <div class="main__listing__search__area__checkbox">□高松市市街　□高松市郊外　□香川県西讃<br>□香川県東讃　□その他県外</div>
+      </div>
+      <div class="main__listing__search__type">
+        <label class="main__listing__search__type__title">検索タイプ</label>
+        <div class="main__listing__search__type__checkbox">□事務所　□店舗　□戸建て<br>□土地　□倉庫　□一棟ビル<br>□マンション・アパート □駐車場</div>
+      </div>
+      <div class="main__listing__search__freeword">
+        <label class="main__listing__search__freeword__title">フリーワード検索</label>
+        <div class="main__listing__search__freeword__searchbox"></div>
+      </div>
+      <div class="main__listing__search__btn">
+        <div class="main__listing__search__btn__submit">検 索</div>
+      </div>
+    </div>
+    <div class="main__listing__list"></div>
+  </div>
+</div>
+<footer class="footer"></footer>
