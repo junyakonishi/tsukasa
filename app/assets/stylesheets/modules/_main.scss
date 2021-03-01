@@ -1,0 +1,376 @@
+* {
+  box-sizing: border-box;
+}
+.header {
+  width: 1200px;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  display: block;
+  &__top {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    &__left {
+      font-size: 30px;
+      font-weight: 600;
+      color:black;
+      padding: 35px;
+    }
+    &__right {
+      height: 100%;
+      width: 500px;
+      position: relative;
+      top: 15px;
+      &__info {
+        font-size: 17px;
+        font-weight: bold;
+        position: absolute;
+        top:10px;
+        left:130px;
+      }
+      &__request {
+        background-color: #3CCACE;
+        border: 1px solid #3CCACE;
+        border-radius: 10px;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        padding: 10px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        text-decoration: none;
+      }
+    }
+  }
+  &__bottom {
+    width: 100%;
+    background-color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 30px;
+    &__info {
+      color: #fff;
+      text-decoration: none;
+    }
+    &__ask {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+  }
+}
+.main {
+  &__comp {
+    height: 450px;
+    width: 1200px;
+    margin: 20px 0px;
+    display: flex;
+    padding: 30px 50px;
+    &__image {
+      height: 100%;
+      width: 65%;
+      border: 1px solid whitesmoke;
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+    &__info {
+      height: 100%;
+      width: 35%;
+      border: 1px solid whitesmoke;
+      padding: 35px 25px;
+      &__title {
+        font-size: 30px;
+        text-align: center;
+      }
+      &__sub {
+        font-size: 20px;
+        margin: 30px 0 20px 0;
+        font-weight: bold;
+        text-align: center;
+      }
+      &__comment {
+        font-size: 17px;
+      }
+    }
+  }
+  
+  &__bar {
+    width: 1200px;
+    background-color: black;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 8px 30px;
+    color: #fff;
+  }
+  
+  &__listing {
+    width: 1200px;
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    &__search {
+      width: 35%;
+      color: gray;
+      margin: 50px 30px 50px 30px;
+      &__title {
+        width: 100%;
+        font-size: 20px;
+        margin: 20px 0;
+        font-weight: bold;
+      }
+      &__tab {
+        width: 100%;
+        font-size: 18px;
+        font-weight: bold;
+        display: flex;
+        margin-top: 30px;
+        &__rent {
+          width: 50%;
+          color: whitesmoke;
+          background-color: black;
+          text-align: center;
+          padding: 10px;
+        }
+        &__sale {
+          width: 50%;
+          color: gray;
+          background-color: whitesmoke;
+          text-align: center;
+          padding: 10px;
+        }
+      }
+      &__area {
+        padding: 30px 20px;
+        border-bottom: 1px dotted whitesmoke;
+        &__title {
+          width: 100%;
+          font-size: 18px;
+          font-weight: bold;
+        }
+        &__checkbox {
+          margin-top: 20px;
+          font-size: 17px;
+        }
+      }
+      &__type {
+        padding: 30px 20px;
+        border-bottom: 1px dotted whitesmoke;
+        &__title {
+          width: 100%;
+          font-size: 18px;
+          font-weight: bold;
+        }
+        &__checkbox {
+          margin-top: 20px;
+          font-size: 17px;
+        }
+      }
+      &__freeword {
+        padding: 30px 20px;
+        border-bottom: 1px dotted whitesmoke;
+        &__title {
+          width: 100%;
+          font-size: 18px;
+          font-weight: bold;
+        }
+        &__searchbox {
+          margin-top: 20px;
+          height: 30px;
+          width: 350px;
+          border: 1px solid gray;
+        }
+      }
+      &__btn {
+        padding: 30px 20px;
+        &__submit {
+          color: white;
+          padding: 10px 0px;
+          border: 1px solid gray;
+          background-color: gray;
+          width: 100%;
+          text-align: center;
+          font-size: 20px;
+          font-weight: bold;
+        }
+
+      }
+
+    }
+    &__list {
+      width: 65%;
+      // background-color: rgb(232, 231, 241);
+      display: flex;
+      flex-wrap: wrap;
+      &__item1 {
+        padding: 10px;
+        width: 350px;
+        &__photo {
+          width: 100%;
+          height: 245px;
+          box-shadow: 0 10px 25px 0 rgba(0,0,0,0.15);
+          text-decoration: none;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        &__mark {
+          margin-left: 40px;
+          height: 20px;
+          background-color: #ff0221;
+          color: wheat;
+          font-size: 18px;
+          padding: 2px 6px;
+          border-radius: 2px;
+          font-weight: 600;
+        }
+        &__name {
+          width: 100%;
+          margin-left: 10px;
+          font-size: 20px;
+          font-weight: bold;
+        }
+        &__detail {
+          margin-left: 40px;
+          margin-top: 15px;
+          font-size: 18px;
+        }
+      }
+      &__item2 {
+        padding: 10px;
+        width: 350px;
+        &__photo {
+          width: 100%;
+          height: 245px;
+          box-shadow: 0 10px 25px 0 rgba(0,0,0,0.15);
+          text-decoration: none;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        &__mark {
+          width: 100%;
+          margin-left: 40px;
+          height: 20px;
+          background-color: #ff0221;
+          color: wheat;
+          font-size: 18px;
+          padding: 2px 6px;
+          border-radius: 2px;
+          font-weight: 600;
+        }
+        &__name {
+          width: 100%;
+          margin-left: 10px;
+          font-size: 20px;
+          font-weight: bold;
+        }
+        &__detail {
+          margin-left: 40px;
+          margin-top: 15px;
+          font-size: 18px;
+        }
+      }
+      &__item3 {
+        padding: 10px;
+        width: 350px;
+        &__photo {
+          width: 100%;
+          height: 245px;
+          box-shadow: 0 10px 25px 0 rgba(0,0,0,0.15);
+          text-decoration: none;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        &__mark {
+          width: 100%;
+          margin-left: 40px;
+          height: 20px;
+          background-color: #ff0221;
+          color: wheat;
+          font-size: 18px;
+          padding: 2px 6px;
+          border-radius: 2px;
+          font-weight: 600;
+        }
+        &__name {
+          width: 100%;
+          margin-left: 10px;
+          font-size: 20px;
+          font-weight: bold;
+        }
+        &__detail {
+          margin-left: 40px;
+          margin-top: 15px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+.footer {
+  width: 1200px;
+  min-height: 100px;
+  border-top: 1px solid whitesmoke;
+  display: block;
+  text-align: center;
+  &__base {
+    margin: 0 auto;
+    width: 100%;
+    &__leftside {
+      display: flex;
+      margin-left:50px;
+      margin-top: 20px;
+      justify-content: center;
+      
+      &__companyinfo {
+        font-size: 18px;
+        margin-right: 30px;
+        padding-right: 20px;
+        border-right: 1px solid gray;
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+      &__require {
+        font-size: 18px;
+        margin-right: 30px;
+        padding-right: 20px;
+        border-right: 1px solid gray;
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+      &__policy {
+        font-size: 18px;
+        margin-right: 30px;
+        padding-right: 20px;
+        border-right: 1px solid gray;
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+      &__tel {
+        font-size: 18px;
+        padding-right: 20px;
+        border-right: 1px solid gray;
+      }
+
+    }
+  }
+  &__copyright {
+    margin-left:50px;
+    margin-top: 10px;
+  }
+}
+
