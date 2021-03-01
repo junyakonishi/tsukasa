@@ -202,13 +202,175 @@
     }
     &__list {
       width: 65%;
-      background-color: rgb(223, 221, 235);
+      // background-color: rgb(232, 231, 241);
+      display: flex;
+      flex-wrap: wrap;
+      &__item1 {
+        padding: 10px;
+        width: 350px;
+        &__photo {
+          width: 100%;
+          height: 245px;
+          box-shadow: 0 10px 25px 0 rgba(0,0,0,0.15);
+          text-decoration: none;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        &__mark {
+          margin-left: 40px;
+          height: 20px;
+          background-color: #ff0221;
+          color: wheat;
+          font-size: 18px;
+          padding: 2px 6px;
+          border-radius: 2px;
+          font-weight: 600;
+        }
+        &__name {
+          width: 100%;
+          margin-left: 10px;
+          font-size: 20px;
+          font-weight: bold;
+        }
+        &__detail {
+          margin-left: 40px;
+          margin-top: 15px;
+          font-size: 18px;
+        }
+      }
+      &__item2 {
+        padding: 10px;
+        width: 350px;
+        &__photo {
+          width: 100%;
+          height: 245px;
+          box-shadow: 0 10px 25px 0 rgba(0,0,0,0.15);
+          text-decoration: none;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        &__mark {
+          width: 100%;
+          margin-left: 40px;
+          height: 20px;
+          background-color: #ff0221;
+          color: wheat;
+          font-size: 18px;
+          padding: 2px 6px;
+          border-radius: 2px;
+          font-weight: 600;
+        }
+        &__name {
+          width: 100%;
+          margin-left: 10px;
+          font-size: 20px;
+          font-weight: bold;
+        }
+        &__detail {
+          margin-left: 40px;
+          margin-top: 15px;
+          font-size: 18px;
+        }
+      }
+      &__item3 {
+        padding: 10px;
+        width: 350px;
+        &__photo {
+          width: 100%;
+          height: 245px;
+          box-shadow: 0 10px 25px 0 rgba(0,0,0,0.15);
+          text-decoration: none;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        &__mark {
+          width: 100%;
+          margin-left: 40px;
+          height: 20px;
+          background-color: #ff0221;
+          color: wheat;
+          font-size: 18px;
+          padding: 2px 6px;
+          border-radius: 2px;
+          font-weight: 600;
+        }
+        &__name {
+          width: 100%;
+          margin-left: 10px;
+          font-size: 20px;
+          font-weight: bold;
+        }
+        &__detail {
+          margin-left: 40px;
+          margin-top: 15px;
+          font-size: 18px;
+        }
+      }
     }
   }
 }
 .footer {
   width: 1200px;
-  height: 200px;
-  background-color: rgb(227, 240, 229);
+  min-height: 100px;
+  border-top: 1px solid whitesmoke;
+  display: block;
+  text-align: center;
+  &__base {
+    margin: 0 auto;
+    width: 100%;
+    &__leftside {
+      display: flex;
+      margin-left:50px;
+      margin-top: 20px;
+      justify-content: center;
+      
+      &__companyinfo {
+        font-size: 18px;
+        margin-right: 30px;
+        padding-right: 20px;
+        border-right: 1px solid gray;
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+      &__require {
+        font-size: 18px;
+        margin-right: 30px;
+        padding-right: 20px;
+        border-right: 1px solid gray;
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+      &__policy {
+        font-size: 18px;
+        margin-right: 30px;
+        padding-right: 20px;
+        border-right: 1px solid gray;
+        a {
+          text-decoration: none;
+          color: black;
+        }
+      }
+      &__tel {
+        font-size: 18px;
+        padding-right: 20px;
+        border-right: 1px solid gray;
+      }
+
+    }
+  }
+  &__copyright {
+    margin-left:50px;
+    margin-top: 10px;
+  }
 }
 
