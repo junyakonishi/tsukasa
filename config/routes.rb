@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   root to:'items#index'
   resources :items
 
-  def show
-  end
+  resources :contacts
+  # get 'contacts/new',to: 'contacts#new'
 end
 
 

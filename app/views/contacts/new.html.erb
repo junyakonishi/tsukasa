@@ -1,0 +1,34 @@
+<div class="bar">
+  <h2>Inquiry</h2>
+</div>
+<div class="inquirypage">
+  <%= form_with class:"inquirypage__main", local: true do |f| %>
+    <div class="inquirypage__main__text">
+      <br>
+      <h1>*下記をご入力いただき、SENDボタンを押してください</h1>
+    </div>
+    <div class="inquirypage__main__table1">
+      <label class="inquirypage__main__table1__title">Name</label>
+      <span class="inquirypage__main__table1__mark">必須</span>
+      <%= f.text_field :hoge, class: "inquirypage__main__table1__name" %>
+    </div>
+    <div class="inquirypage__main__table2">
+      <label class="inquirypage__main__table2__title">E-mail</label>
+      <span class="inquirypage__main__table2__mark">必須</span>
+      <%= f.email_field :hoge, class: "inquirypage__main__table2__email" %>
+    </div>
+    <div class="inquirypage__main__table3">
+      <label class="inquirypage__main__table3__title">Telephone</label>
+      <span class="inquirypage__main__table3__mark">必須</span>
+      <%= f.text_field :hoge, class: "inquirypage__main__table3__phone" %>
+    </div>
+    <div class="inquirypage__main__detail">
+      <label class="inquirypage__main__detail__title">お問い合わせ内容</label>
+      <span class="inquirypage__main__detail__mark">必須</span>
+      <%= f.text_area :hoge, class: "inquirypage__main__detail__text" %>
+    </div>
+    <div class="inquirypage__main__submit">
+      <%= f.submit "SEND", class: "inquirypage__main__submit__btn" %>
+    </div>
+  <%end%>
+</div>
