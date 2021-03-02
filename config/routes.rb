@@ -8,7 +8,12 @@ Rails.application.routes.draw do
       get 'search'
     end
 
+
+  resources :contacts
+  # get 'contacts/new',to: 'contacts#new'
+
   end
+
 end
 
 
