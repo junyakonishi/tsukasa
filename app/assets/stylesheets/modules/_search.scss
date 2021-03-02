@@ -1,0 +1,144 @@
+* {
+  box-sizing: border-box
+}
+.under {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  &__side {
+    width: 35%;
+    padding: 50px 40px;
+    &__search {
+      width: 100%;
+      color: gray;
+      padding: 20px 40px;
+      border: 1px dashed whitesmoke;
+      &__title {
+        width: 100%;
+        font-size: 20px;
+        margin: 20px 0;
+        font-weight: bold;
+      }
+      &__tab {
+        width: 100%;
+        font-size: 18px;
+        font-weight: bold;
+        display: flex;
+        margin-top: 30px;
+        &__rent {
+          width: 50%;
+          color: whitesmoke;
+          background-color: black;
+          text-align: center;
+          padding: 10px;
+        }
+        &__sale {
+          width: 50%;
+          color: gray;
+          background-color: whitesmoke;
+          text-align: center;
+          padding: 10px;
+        }
+      }
+      &__area {
+        padding: 30px 20px;
+        border-bottom: 1px dotted whitesmoke;
+        &__title {
+          width: 100%;
+          font-size: 18px;
+          font-weight: bold;
+        }
+        &__checkbox {
+          margin-top: 20px;
+          font-size: 17px;
+        }
+      }
+      &__type {
+        padding: 30px 20px;
+        border-bottom: 1px dotted whitesmoke;
+        &__title {
+          width: 100%;
+          font-size: 18px;
+          font-weight: bold;
+        }
+        &__checkbox {
+          margin-top: 20px;
+          font-size: 17px;
+        }
+      }
+      &__freeword {
+        padding: 30px 20px;
+        border-bottom: 1px dotted whitesmoke;
+        &__title {
+          width: 100%;
+          font-size: 18px;
+          font-weight: bold;
+        }
+        &__searchbox {
+          margin-top: 20px;
+          height: 30px;
+          width: 100%;
+          border: 1px solid gray;
+        }
+      }
+      &__btn {
+        padding: 30px 20px;
+        &__submit {
+          color: white;
+          padding: 10px 0px;
+          border: 1px solid gray;
+          background-color: gray;
+          width: 100%;
+          text-align: center;
+          font-size: 20px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  &__main {
+    width: 65%;
+    height: 100%;
+    padding: 50px 0px;
+    &__base {
+      width: 100%;
+      height: 100%;
+      padding: 20px 0;
+      display: flex;
+      flex-wrap: wrap;
+      &__item1 {
+        width: calc(100% / 3);
+        height: 100%;
+        padding-left: 10px;
+        padding-right: 10px;
+        margin-bottom: 20px;
+        &__photo {
+          box-shadow: 0 10px 25px 0 rgba(0,0,0,0.15);
+          text-decoration: none;
+          img {
+          width: 100%;
+          height: 100%;
+          }
+        }
+        &__mark {
+          height: 20px;
+          background-color: #ff0221;
+          color: white;
+          font-size: 16px;
+          padding: 2px 6px;
+          border-radius: 2px;
+          font-weight: 600;
+        }
+        &__name {
+          width: 100%;
+          margin-left: 10px;
+          font-size: 18px;
+          font-weight: bold;
+        }
+        &__access {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
