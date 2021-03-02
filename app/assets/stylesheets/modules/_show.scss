@@ -1,0 +1,201 @@
+.Showitem {
+  width: 100%;
+  height: 100%;
+  &__bar1 {
+    height: 49px;
+    background-color: black;
+    h2 {
+      margin: auto;
+      padding: 1.3em 0 0;
+      width: 1200px;
+      color: white;
+      font-family: Helvetica;
+      font-size: 1.2em;
+      letter-spacing: 0.1em;
+      line-height: 0em;
+    }
+  }
+  &__bar2 {
+    position: relative;
+    margin: auto;
+    width: 1200px;
+    height: 60px;
+    color: black;
+    p {
+      display: block;
+      padding: 1.1em 0 1em 25px;
+      line-height: 0;
+      font-size: 0.75em;
+      font-weight: bold;
+      cursor: pointer;
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+  &__main {
+    height: 1793px;
+    padding: 0 0 2.5em;
+    &__image {
+      margin: auto;
+      width: 1200px;
+      height: 520px;
+      overflow: hidden;
+      &__right {
+        float: right;
+        position: relative;
+        width: 363px;
+        height: 520px;
+        h3 {
+          margin: 80px 0 0;
+          font-size: 1.5em;
+          font-weight: normal;
+          line-height: 1.25em;
+          color: black;
+        }
+        h4 {
+          margin: 2.5em 0 0;
+          font-size: 1.15em;
+          line-height: 1.5em;
+        }
+        p {
+          margin: 1.5em 0 1em;
+          padding-left: 0;
+          height: 255px;
+          font-size: 0.85em;
+          line-height: 2.36em;
+          overflow: hidden;
+        }
+        &__btn {
+          position: absolute;
+          width: 363px;
+          height: 80px;
+          font-size: 13px;
+          bottom: 0;
+          margin: 0;
+          line-height: 80px;
+          &__submit {
+            width: 363px;
+            height: 25px;
+            margin: 15px 0 0;
+            background-color: #159BC5;
+            padding-top: 15px;
+            padding-right: 60px;
+            padding-left: 60px;
+            margin-top: 15px;
+            padding-bottom: 15px;
+            margin-left: 35px;
+            border-radius: 4px;
+
+            color: white;
+            text-decoration: none;
+          }
+        }
+      }
+      &__left {
+        width: 780px;
+        height: 520px;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    &__middle {
+      margin: 15px auto 0;
+      width: 1200px;
+      height: 1258px;
+      float: left;
+      &__left {
+        width: 565px;
+        float: left;
+        h4 {
+          font-size: 1.2em;
+          margin: 50px 0 0;
+          color: black;
+        }
+        &__detail {
+          border: 1px solid rgb(136,136,136);
+          height: 911px;
+        }
+        table {
+          width: 563px;
+          th {
+            width: 93px;
+            border-right: 1px solid rgb(211,211,211);
+            padding: 0.75em 1em;
+            font-size: 0.8em;
+            font-weight: normal;
+            text-align: left;
+            vertical-align: top;
+            border-bottom: 1px solid rgb(211,211,211);
+            word-break: break-all;
+          }
+          td {
+            padding: 0.75em 1em;
+            font-size: 0.8em;
+            font-weight: normal;
+            text-align: left;
+            vertical-align: top;
+            border-bottom: 1px solid rgb(211,211,211);
+            word-break: break-all;
+          }
+        }
+        &__madori {
+          height: 335px;
+          padding-top: 15px;
+          text-align: center;
+          border-top: 1px solid rgb(211,211,211);
+          img {
+            width: 100%; 
+            height: 100%;
+          }
+        }
+      }
+      &__right {
+        float: right;
+        width: 565px;
+        height: 1257px;
+        table {
+          margin: 20px 0 0;
+          width: auto;
+        }
+        th {
+          width: 70px;
+          padding: 0.25em 0;
+          font-size: 0.85em;
+          font-weight: normal;
+          text-align: left;
+          vertical-align: top;
+          line-height: 1.5em;
+          word-break: break-all;
+        }
+        td {
+          padding: 0.25em 0;
+          font-size: 0.85em;
+          font-weight: normal;
+          text-align: left;
+          vertical-align: top;
+          line-height: 1.5em;
+          word-break: break-all;
+        }
+        &__map {
+          margin: 1.5em 0 0;
+          width: 565px;
+          height: 425px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        &__text {
+          margin: 1.5em 0 0;
+          font-size: 0.85em;
+          line-height: 1.8em;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}
