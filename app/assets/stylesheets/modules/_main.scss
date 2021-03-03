@@ -8,12 +8,12 @@
   &__top {
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     &__left {
-      font-size: 40px;
+      font-size: 50px;
       font-weight: 600;
       color:black;
-      padding: 35px;
+      padding: 35px 0 35px 100px;
       font-family: Arial, Helvetica, sans-serif;
     }
     &__right {
@@ -22,7 +22,7 @@
       position: relative;
       top: 15px;
       &__info {
-        font-size: 17px;
+        font-size: 18px;
         font-weight: bold;
         position: absolute;
         top:10px;
@@ -49,14 +49,39 @@
     font-size: 16px;
     font-weight: bold;
     padding: 8px 30px;
-    &__info {
-      color: #fff;
-      text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    &__left {
+      width: 50%;
+      margin-left: 50px;
+      &__info {
+        color: #fff;
+        text-decoration: none;
+      }
+      &__ask {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 30px;
+      }
     }
-    &__ask {
-      color: #fff;
-      text-decoration: none;
-      margin-left: 20px;
+    &__right {
+      width: 50%;
+      text-align: right;
+      margin-right: 50px;
+      &__login {
+        color: #fff;
+        text-decoration: none;
+      }
+      &__register {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 30px;
+      }
+      &__shipping {
+        color: #fff;
+        text-decoration: none;
+        margin-left: 30px;
+      }
     }
   }
 }
@@ -67,9 +92,10 @@
     margin: 20px 0px;
     display: flex;
     padding: 30px 50px;
+    justify-content: center;
     &__image {
       height: 560px;
-      width: 65%;
+      width: 60%;
       border: 1px solid whitesmoke;
       img {
         height: 100%;
@@ -102,7 +128,7 @@
     background-color: black;
     font-size: 16px;
     font-weight: bold;
-    padding: 8px 30px;
+    padding: 8px 80px;
     color: #fff;
   }
   
@@ -110,6 +136,7 @@
     width: 100%;
     height: 100%;
     display: flex;
+    padding: 0 50px;
     &__side {
       width: 35%;
       padding: 50px 40px;
