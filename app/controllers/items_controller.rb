@@ -8,6 +8,7 @@ class ItemsController < ApplicationController
   end
 
   def create
+    # binding.pry
     @item = Item.new(item_params)
     if @item.valid?
       @item.save
@@ -25,6 +26,10 @@ class ItemsController < ApplicationController
 
   def edit
     @item = Item.find(params[:id])
+  private
+
+  def item_params
+    params.require(:item).permit(:name, :catchup, :good, :baba, :room, :room_fee, :common_ff, :area, :deposit, :money, :guarantee, :brokage, :insurance, :renew, :movein, :others ,:address, :traffic, :building_name, :structure, :occupied_area, :number, :year, :specifications, :image).merge(user_id: current_user.id)
   end
 
 end
