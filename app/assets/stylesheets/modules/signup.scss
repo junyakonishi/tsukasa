@@ -1,0 +1,83 @@
+.bar {
+  height: 49px;
+  background-color: black;
+  h2 {
+    padding-left: 40px;
+    color: white;
+    font-family: Helvetica;
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+    line-height: 49px;
+  }
+}
+
+.field1 {
+  margin: 0 auto;
+  width: 500px;
+  background-color: whitesmoke;
+  margin-top: 40px;
+  label {
+    font-family: Helvetica;
+    font-size: 16px;
+    margin-left: 50px;
+  }
+  input {
+    width: 400px;
+    height: 45px;
+    margin-left: 50px;
+    border: solid 1px gray;
+  }
+}
+.field2 {
+  margin: 0 auto;
+  width: 500px;
+  background-color: whitesmoke;
+  padding-top: 25px;
+  label {
+    font-family: Helvetica;
+    font-size: 16px;
+    margin-left: 50px;
+  }
+  input {
+    width: 400px;
+    height: 45px;
+    margin-left: 50px;
+  }
+}
+.field3 {
+  margin: 0 auto;
+  width: 500px;
+  background-color: whitesmoke;
+  // padding-top: 25px;
+  padding-bottom: 25px;
+  label {
+    font-family: Helvetica;
+    font-size: 16px;
+    margin-left: 50px;
+  }
+  input {
+    width: 400px;
+    height: 45px;
+    margin-left: 50px;
+  }
+}
+
+
+.actions {
+  margin: 0 auto;
+  width: 500px;
+  height: 40px;
+  padding-top: 25px;
+  margin-left: 400px;
+  input {
+    width: 200px;
+    height: 40px;
+    margin: 0 auto;
+    background-color:  #159BC5;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    font-family: Helvetica;
+    margin-left: 130px;
+  }
+}
