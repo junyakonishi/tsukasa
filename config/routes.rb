@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
 
   resources :contacts
-
+  resources :companies
   # root to: 'home#index'
   # get 'home/show'
 
