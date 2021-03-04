@@ -14,8 +14,12 @@
     Rent / Sale
   </div>
 
+
 <%# <%= form_with model: @item, html: {class:"bases__main"}, local: true do |f| %>
 
+
+
+  
   <div class="main__listing">
     <%= search_form_for @q, url:search_items_path, class:"main__listing__side" do |f| %>
       <div class="main__listing__side__search">
@@ -37,22 +41,25 @@
     <% end %>
 
 
+
     <div class="main__listing__list">
       <div class="main__listing__list__clear">
-        <% @items.each do |item| %>
-          <%= link_to item_path(item), class:"main__listing__list__clear__item1" do %>
-            <div class="main__listing__list__clear__item1__photo">
-              <%= image_tag item.image.url %>
-            </div>
-            <span class="main__listing__list__clear__item1__mark">Sale</span>
-            <label class="main__listing__list__clear__item1__name">
-              <%=item.name %>
-            </label>
-            <p class="main__listing__list__clear__item1__detail">J
-              <%=item.traffic %>
-            </p>
+          <% unless @items[0]==nil %> 
+            <% @items.each do |item| %>
+              <%= link_to item_path(item), class:"main__listing__list__clear__item1" do %>
+                <div class="main__listing__list__clear__item1__photo">
+                  <%= image_tag item.image.url %>
+                </div>
+                <span class="main__listing__list__clear__item1__mark">Sale</span>
+                <label class="main__listing__list__clear__item1__name">
+                  <%=item.name %>
+                </label>
+                <p class="main__listing__list__clear__item1__detail">J
+                  <%=item.traffic %>
+                </p>
+              <% end %>
+            <% end %>
           <% end %>
-        <% end %>
           <div class="main__listing__list__clear__item1">
             <div class="main__listing__list__clear__item1__photo" >
               <%= image_tag "building1.png" %>
