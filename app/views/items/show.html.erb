@@ -6,7 +6,7 @@
   </div> %>
   <div class="Showitem__bar2">
     <p class="Showitem__bar2__back">
-      <a href="#">一覧へ</a>
+      <%# <a href="#">一覧へ</a> %>
      </p>
   <div class="Showitem__main">
     <div class="Showitem__main__image">
@@ -15,7 +15,8 @@
         <h4>さぁ、新しい家に帰ろう</h4>
         <p>牛田山の森に守られたSATONOWAは、人と人、人と地域を繋ぐ暮らしの場。まちの中心の広場では毎年夏に、盆踊りが開かれ、地域の文化やコミュニティを育んでいます。広場を囲む「SATONOWA TERRACE」は、地域と共に暮らす賃貸住宅です。外との繋がりを感じる開放的なプランは、アウトドアや趣味を思う存分楽しめる、ライフスタイルに寄り添った、多様な暮らしを叶えます。</p>
         <div class="Showitem__main__image__right__btn">
-          <a href="#" class="Showitem__main__image__right__btn__submit">内覧申し込み / お問い合わせ</a>
+          <%=link_to "内覧申し込み / お問い合わせ", new_contact_path, class:"Showitem__main__image__right__btn__submit" %>
+          <%# <a href="#" class="Showitem__main__image__right__btn__submit">内覧申し込み / お問い合わせ</a> %>
         </div>
       </div>
       <div class="Showitem__main__image__left">
@@ -27,7 +28,7 @@
         <h4>For Rent</h4>
         <div class="Showitem__main__middle__left__detail">
           <table>
-            <tr><th>契約形態</th><td>普通賃貸借契約2年</td></tr>
+            <tr><th>タイプ</th><td>マンション・アパート</td></tr>
             <tr><th>募集部屋</th><td>クスノキ、アベマキ、ネジキ、アラカシ</td></tr>
             <tr><th>賃料</th><td>80,000円</td></tr>
             <tr><th>共益費</th><td>5,000円</td></tr>
@@ -45,6 +46,11 @@
             <%= image_tag "間取り図-image.jpg" %>
           </div>
         </div>
+        <% if user_signed_in? && current_page?(users_items_show_path)%>
+        <br><br>
+          <%=link_to "編集する", new_contact_path, class:"Showitem__main__middle__left__edit" %>
+          <%=link_to "削除する", new_contact_path, class:"Showitem__main__middle__left__delete" %>
+        <%end%>
       </div>
       <div class="Showitem__main__middle__right">
         <h4>Access</h4>
@@ -61,26 +67,27 @@
           </tr>
         </table>
         <div class="Showitem__main__middle__right__map">
-          <%= image_tag "Map-image.png" %>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6961.876760040115!2d132.47825969734362!3d34.41531467737127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355a9f307b02e099%3A0x29ad423e9c11fc6a!2z44CSNzMyLTAwNjIg5bqD5bO255yM5bqD5bO25biC5p2x5Yy654mb55Sw5pep56iy55Sw77yT5LiB55uu77yV!5e0!3m2!1sja!2sjp!4v1614839553741!5m2!1sja!2sjp" width="565" height="425" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
+        <br>
         <h4>Outline</h4>
-        <table>
-          <tr><th>物件名</th><td>：</td><td>SATONOWA TERRACE</td></tr>
-          <tr><th>構造・規模</th><td>：</td><td>木造2階建</td></tr>
-          <tr><th>専有面積</th><td>：</td><td>48.44㎡</td></tr>
-          <tr><th>募集戸数</th><td>：</td><td>8戸（SATONOWA TERRACE1：4戸／SATONOWA TERRACE2：4戸）</td></tr>
-          <tr><th>契約形態</th><td>：</td><td>普通借家契約2年</td></tr>
-          <tr><th>竣工年</th><td>：</td><td>SATONOWA TERRACE1：2020年10月／SATONOWA TERRACE2：2020年12月</td></tr>
-          <tr><th>仕様・設備</th><td>：</td><td>無垢フローリング、浴室乾燥機、ウォシュレット、モニター付インターホン、備付エアコン2台、都市ガス、インターネット使用料無料</td></tr>
-          <tr><th>駐車場</th><td>：</td><td>有（使用料無料）</td></tr>
-          <tr><th>駐輪場</th><td>：</td><td>無</td></tr>
-          <tr><th>バイク置場</th><td>：</td><td>無</td></tr>
-          <tr><th>備考</th><td>：</td><td>ペット飼育不可</td></tr>
-          <tr><th>設計監修</th><td>：</td><td>株式会社ブルースタジオ</td></tr>
-          <tr><th>取引形態</th><td>：</td><td>媒介</td></tr>
-          <tr><th>情報更新</th><td>：</td><td>2021年2月19日</td></tr>
-          <tr><th>次回更新</th><td>：</td><td>2021年3月5日</td></tr>
-        </table>
+          <table>
+            <tr><th>物件名</th><td>：</td><td>SATONOWA TERRACE</td></tr>
+            <tr><th>構造・規模</th><td>：</td><td>木造2階建</td></tr>
+            <tr><th>専有面積</th><td>：</td><td>48.44㎡</td></tr>
+            <tr><th>募集戸数</th><td>：</td><td>8戸（SATONOWA TERRACE1：4戸／SATONOWA TERRACE2：4戸）</td></tr>
+            <tr><th>契約形態</th><td>：</td><td>普通借家契約2年</td></tr>
+            <tr><th>竣工年</th><td>：</td><td>SATONOWA TERRACE1：2020年10月／SATONOWA TERRACE2：2020年12月</td></tr>
+            <tr><th>仕様・設備</th><td>：</td><td>無垢フローリング、浴室乾燥機、ウォシュレット、モニター付インターホン、備付エアコン2台、都市ガス、インターネット使用料無料</td></tr>
+            <tr><th>駐車場</th><td>：</td><td>有（使用料無料）</td></tr>
+            <tr><th>駐輪場</th><td>：</td><td>無</td></tr>
+            <tr><th>バイク置場</th><td>：</td><td>無</td></tr>
+            <tr><th>備考</th><td>：</td><td>ペット飼育不可</td></tr>
+            <tr><th>設計監修</th><td>：</td><td>株式会社ブルースタジオ</td></tr>
+            <tr><th>取引形態</th><td>：</td><td>媒介</td></tr>
+            <tr><th>情報更新</th><td>：</td><td>2021年2月19日</td></tr>
+            <tr><th>次回更新</th><td>：</td><td>2021年3月5日</td></tr>
+          </table>
         <p class="Showitem__main__middle__right__text">
           *条件は予告なく変更される場合があります。ご了承下さい。
         </p>
@@ -89,3 +96,4 @@
   </div>
 </div>
 <%# <%= render 'layouts/footer'%> 
+<%# <% if user_signed_in? && current_page?(users_items_show_path)%> 
