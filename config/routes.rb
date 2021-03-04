@@ -23,12 +23,12 @@ Rails.application.routes.draw do
 
   
 
-  end
+  # end
 
-  resources :contacts
-  resources :companies
-  # root to: 'home#index'
-  # get 'home/show'
+  # # resources :contacts
+  # # resources :companies
+  # # # root to: 'home#index'
+  # # # get 'home/show'
 
 
 end
