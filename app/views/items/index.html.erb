@@ -13,66 +13,77 @@
   <div class="main__bar">
     Rent / Sale
   </div>
+
+
+<%# <%= form_with model: @item, html: {class:"bases__main"}, local: true do |f| %>
+
+
+
+  
   <div class="main__listing">
-    <div class="main__listing__side">
+    <%= search_form_for @q, url:search_items_path, class:"main__listing__side" do |f| %>
       <div class="main__listing__side__search">
         <label class="main__listing__side__search__title">Search / 検索</label>
         <div class="main__listing__side__search__tab">
           <div class="main__listing__side__search__tab__rent">Rent</div>
           <div class="main__listing__side__search__tab__sale">Sale</div>
         </div>
-        <div class="main__listing__side__search__area">
-          <label class="main__listing__side__search__area__title">エリア</label>
-          <div class="main__listing__side__search__area__checkbox">□高松市市街　□高松市郊外　□香川県西讃<br>□香川県東讃　□その他県外</div>
-        </div>
-        <div class="main__listing__side__search__type">
-          <label class="main__listing__side__search__type__title">検索タイプ</label>
-          <div class="main__listing__side__search__type__checkbox">□事務所　□店舗　□戸建て<br>□土地　□倉庫　□一棟ビル<br>□マンション・アパート □駐車場</div>
-        </div>
+        
         <div class="main__listing__side__search__freeword">
           <label class="main__listing__side__search__freeword__title">フリーワード検索</label>
           <div class="main__listing__side__search__freeword__searchbox"></div>
         </div>
         <div class="main__listing__side__search__btn">
           <div class="main__listing__side__search__btn__submit">検 索</div>
+          <%= f.submit %>
         </div>
       </div>
-    </div>
+    <% end %>
+
+
+
     <div class="main__listing__list">
-       <div class="main__listing__list__clear">
-    
-        <div class="main__listing__list__clear__item1">
-          <div class="main__listing__list__clear__item1__photo" >
-            <%= image_tag "building1.png" %>
+      <div class="main__listing__list__clear">
+          <% unless @items[0]==nil %> 
+            <% @items.each do |item| %>
+              <%= link_to item_path(item), class:"main__listing__list__clear__item1" do %>
+                <div class="main__listing__list__clear__item1__photo">
+                  <%= image_tag item.image.url %>
+                </div>
+                <span class="main__listing__list__clear__item1__mark">Sale</span>
+                <label class="main__listing__list__clear__item1__name">
+                  <%=item.name %>
+                </label>
+                <p class="main__listing__list__clear__item1__detail">J
+                  <%=item.traffic %>
+                </p>
+              <% end %>
+            <% end %>
+          <% end %>
+          <div class="main__listing__list__clear__item1">
+            <div class="main__listing__list__clear__item1__photo" >
+              <%= image_tag "building1.png" %>
+            </div>
+            <span class="main__listing__list__clear__item1__mark">Sale</span>
+            <label class="main__listing__list__clear__item1__name">サーパス高松駅前</label>
+            <p class="main__listing__list__clear__item1__detail">JR高徳線「高松駅」徒歩4分/63.90平米/15万円</p>
           </div>
-          <span class="main__listing__list__clear__item1__mark">Sale</span>
-          <label class="main__listing__list__clear__item1__name">サーパス高松駅前</label>
-          <p class="main__listing__list__clear__item1__detail">JR高徳線「高松駅」徒歩4分/63.90平米/15万円</p>
-        </div>
-        <div class="main__listing__list__clear__item1">
-          <div class="main__listing__list__clear__item1__photo" >
-            <%= image_tag "building1.png" %>
+          <div class="main__listing__list__clear__item1">
+            <div class="main__listing__list__clear__item1__photo" >
+              <%= image_tag "building1.png" %>
+            </div>
+            <span class="main__listing__list__clear__item1__mark">Sale</span>
+            <label class="main__listing__list__clear__item1__name">サーパス高松駅前</label>
+            <p class="main__listing__list__clear__item1__detail">JR高徳線「高松駅」徒歩4分/63.90平米/15万円</p>
           </div>
-          <span class="main__listing__list__clear__item1__mark">Sale</span>
-          <label class="main__listing__list__clear__item1__name">サーパス高松駅前</label>
-          <p class="main__listing__list__clear__item1__detail">JR高徳線「高松駅」徒歩4分/63.90平米/15万円</p>
-        </div>
-        <div class="main__listing__list__clear__item1">
-          <div class="main__listing__list__clear__item1__photo" >
-            <%= image_tag "building1.png" %>
+          <div class="main__listing__list__clear__item1">
+            <div class="main__listing__list__clear__item1__photo" >
+              <%= image_tag "building1.png" %>
+            </div>
+            <span class="main__listing__list__clear__item1__mark">Sale</span>
+            <label class="main__listing__list__clear__item1__name">サーパス高松駅前</label>
+            <p class="main__listing__list__clear__item1__detail">JR高徳線「高松駅」徒歩4分/63.90平米/15万円</p>
           </div>
-          <span class="main__listing__list__clear__item1__mark">Sale</span>
-          <label class="main__listing__list__clear__item1__name">サーパス高松駅前</label>
-          <p class="main__listing__list__clear__item1__detail">JR高徳線「高松駅」徒歩4分/63.90平米/15万円</p>
-        </div>
-        <div class="main__listing__list__clear__item1">
-          <div class="main__listing__list__clear__item1__photo" >
-            <%= image_tag "building1.png" %>
-          </div>
-          <span class="main__listing__list__clear__item1__mark">Sale</span>
-          <label class="main__listing__list__clear__item1__name">サーパス高松駅前</label>
-          <p class="main__listing__list__clear__item1__detail">JR高徳線「高松駅」徒歩4分/63.90平米/15万円</p>
-        </div>
       </div>
     </div>
   </div>

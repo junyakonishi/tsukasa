@@ -5,18 +5,24 @@
      <div class="header__top__right__info">
       株式会社司不動産<br>TEL: 087-823-5656<br>電話受付:10:00~17:00
      </div>
-     <a class="header__top__right__request" href="#">お問い合わせ</a>
+     <%=link_to "お問い合わせ", new_contact_path, class:"header__top__right__request" %>
     </div>
   </div>
   <div class="header__bottom">
     <div class="header__bottom__left">
-      <a class="header__bottom__left__info" href="#">会社概要</a>
-      <a class="header__bottom__left__ask" href="#">お問い合わせ</a>
+      <%=link_to "会社概要", companies_path, class:"header__bottom__left__info" %>
+      <%=link_to "お問い合わせ", new_contact_path, class:"header__bottom__left__ask" %>
     </div>
     <div class="header__bottom__right">
+
       <a class="header__bottom__right__login" href="#">ログイン</a>
       <a class="header__bottom__right__register" href="#">新規登録</a>
       <a class="header__bottom__right__shipping" href="#">投稿</a>
+
+      <%=link_to "ログイン", new_user_session_path, class:"header__bottom__right__login" %>
+      <%=link_to "新規登録", new_user_registration_path, class:"header__bottom__right__register" %>
+      <%=link_to "投稿",  new_item_path, class:"header__bottom__right__shipping" %>
+
     </div>
   </div>
 </header>
