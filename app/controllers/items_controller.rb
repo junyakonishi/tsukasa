@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
     @itmes = @q.result.includes(:area, :type)
     # @area = ["高松市市街", "高松市郊外", "香川県西讃", "香川県東讃", "その他県外"]
     # @type = ["事務所", "店舗", "戸建て", "土地", "倉庫", "一棟ビル", "マンション・アパート", "駐車場"]
-    @area = [{id:1, name:"高松市市街"}]
+    # @area = [{id:1, name:"高松市市街"},{id:2, name:"高松市市街"}]
   end
 
   def new
@@ -48,7 +48,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name, :catchup, :good, :baba, :room, :room_fee, :common_ff, :area_id, :deposit, :money, :guarantee, :brokage, :insurance, :renew, :movein, :others ,:address, :traffic, :building_name, :structure, :occupied_area, :number, :year, :specifications, :image).merge(user_id: current_user.id)
+    params.require(:item).permit(:name, :catchup, :good, :type_id, :room, :room_fee, :common_ff, :area_id, :deposit, :money, :guarantee, :brokage, :insurance, :renew, :movein, :others ,:address, :traffic, :building_name, :structure, :occupied_area, :number, :year, :specifications, :image).merge(user_id: current_user.id)
   end
 
   def search_params

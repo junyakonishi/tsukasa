@@ -13,12 +13,6 @@
   <div class="main__bar">
     Rent / Sale
   </div>
-
-
-<%# <%= form_with model: @item, html: {class:"bases__main"}, local: true do |f| %>
-
-
-
   
   <div class="main__listing">
     <%= search_form_for @q, url:search_items_path, class:"main__listing__side" do |f| %>
@@ -28,14 +22,33 @@
           <div class="main__listing__side__search__tab__rent">Rent</div>
           <div class="main__listing__side__search__tab__sale">Sale</div>
         </div>
-        
-        <div class="main__listing__side__search__freeword">
-          <label class="main__listing__side__search__freeword__title">フリーワード検索</label>
-          <div class="main__listing__side__search__freeword__searchbox"></div>
+        <div class="main__listing__side__search__area">
+          <%= f.label :area_id_in, 'エリア', class:"main__listing__side__search__area__title" %>
+          <%= f.collection_check_boxes :area_id_in, Area.all, :id, :name, class:"main__listing__side__search__area__checkbox" do |b|%>
+            <div>
+              <%= b.check_box %>
+              <%= b.label %>
+            </div>
+            <% end %>
         </div>
+
+        <div class="main__listing__side__search__type">
+          <%= f.label :type_id_in, '検索タイプ', class:"main__listing__side__search__type__title" %>
+          <%= f.collection_check_boxes :type_id_in, Type.all, :id, :name, class:"main__listing__side__search__type__checkbox" do |b| %>
+            <div>
+              <%= b.check_box %>
+              <%= b.label %>
+            </div>
+            <% end %>
+        </div>
+
+        <div class="main__listing__side__search__freeword">
+           <%= f.label :name_cont, 'あいまい検索'%>
+           <%= f.search_field :name_cont, class:"main__listing__side__search__freeword__searchbox" %>
+        </div>
+
         <div class="main__listing__side__search__btn">
-          <div class="main__listing__side__search__btn__submit">検 索</div>
-          <%= f.submit %>
+          <%= f.submit class:"main__listing__side__search__btn__submit" %>
         </div>
       </div>
     <% end %>
