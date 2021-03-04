@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
-  # get 'home/index'
-  # get 'home/show'
   
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to:'items#index'
@@ -13,13 +11,12 @@ Rails.application.routes.draw do
     end
 
 
+  end
   resources :contacts
   resources :companies
-  # root to: 'home#index'
-  # get 'home/show'
-
-  end
-
+    get '/companies', to: 'companies#show'
+  resources :users
+    get '/users/items/show', to: 'items#show'
 end
 
 
