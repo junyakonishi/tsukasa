@@ -32,6 +32,16 @@ class ItemsController < ApplicationController
   end
 
   def edit
+    # @item = Item.find(params[:id])
+  end
+
+  def update
+    if @item.update(item_params)
+      redirect_to item_path(@item)
+    else
+      @items=Item.roots
+      render :edit
+    end
     @item = Item.find(params[:id])
   end
 

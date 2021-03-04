@@ -14,9 +14,15 @@
       <%=link_to "お問い合わせ", new_contact_path, class:"header__bottom__left__ask" %>
     </div>
     <div class="header__bottom__right">
+
+      <a class="header__bottom__right__login" href="#">ログイン</a>
+      <a class="header__bottom__right__register" href="#">新規登録</a>
+      <a class="header__bottom__right__shipping" href="#">投稿</a>
+
       <%=link_to "ログイン", new_user_session_path, class:"header__bottom__right__login" %>
       <%=link_to "新規登録", new_user_registration_path, class:"header__bottom__right__register" %>
       <%=link_to "投稿",  new_item_path, class:"header__bottom__right__shipping" %>
+
     </div>
   </div>
 </header>
