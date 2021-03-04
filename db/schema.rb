@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2021_03_02_103802) do
     t.string "room", null: false
     t.string "room_fee", null: false
     t.string "common_ff", null: false
-    t.string "area", null: false
+    t.integer "area_id", null: false
     t.string "deposit", null: false
     t.string "money", null: false
     t.string "guarantee", null: false
@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2021_03_02_103802) do
     t.text "specifications", null: false
     t.integer "user_id", null: false
     t.string "image", null: false
+    t.integer "type_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

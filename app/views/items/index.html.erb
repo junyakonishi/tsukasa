@@ -17,22 +17,14 @@
 <%# <%= form_with model: @item, html: {class:"bases__main"}, local: true do |f| %>
 
   <div class="main__listing">
-    <%= search_form_for(@q, url:search_items_path), html: {class:"main__listing__side"} do |f| %>
+    <%= search_form_for @q, url:search_items_path, class:"main__listing__side" do |f| %>
       <div class="main__listing__side__search">
         <label class="main__listing__side__search__title">Search / 検索</label>
         <div class="main__listing__side__search__tab">
           <div class="main__listing__side__search__tab__rent">Rent</div>
           <div class="main__listing__side__search__tab__sale">Sale</div>
         </div>
-        <div class="main__listing__side__search__area">
-          <%= f.label :area_in, 'エリア', class:"main__listing__side__search__area__title" %>
-          <%= f.collection_check_boxes :area_in, @area, :id, :name, class:"main__listing__side__search__area__checkbox" %>
- 
-        </div>
-        <div class="main__listing__side__search__type">
-          <%= f.label :type_in, '検索タイプ', class:"main__listing__side__search__type__title" %>
-          <%= f.collection_check_boxes :type_in, @type, :id, :name, class:"main__listing__side__search__type__checkbox" %>
-        </div>
+        
         <div class="main__listing__side__search__freeword">
           <label class="main__listing__side__search__freeword__title">フリーワード検索</label>
           <div class="main__listing__side__search__freeword__searchbox"></div>
@@ -60,7 +52,7 @@
               <%=item.traffic %>
             </p>
           <% end %>
-        <%# <% end %> %>
+        <% end %>
           <div class="main__listing__list__clear__item1">
             <div class="main__listing__list__clear__item1__photo" >
               <%= image_tag "building1.png" %>

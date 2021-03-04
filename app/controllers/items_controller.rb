@@ -3,8 +3,9 @@ class ItemsController < ApplicationController
     @q = Item.ransack(params[:q])
     @items = Item.all
     @itmes = @q.result.includes(:area, :type)
-    @area = ["高松市市街", "高松市郊外", "香川県西讃", "香川県東讃", "その他県外"]
-    @type = ["事務所", "店舗", "戸建て", "土地", "倉庫", "一棟ビル", "マンション・アパート", "駐車場"]
+    # @area = ["高松市市街", "高松市郊外", "香川県西讃", "香川県東讃", "その他県外"]
+    # @type = ["事務所", "店舗", "戸建て", "土地", "倉庫", "一棟ビル", "マンション・アパート", "駐車場"]
+    @area = [{id:1, name:"高松市市街"}]
   end
 
   def new
