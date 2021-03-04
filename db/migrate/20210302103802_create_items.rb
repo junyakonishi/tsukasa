@@ -4,15 +4,15 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.string :name, null: false
       t.string :catchup, null: false
       t.text :good, null: false
-      t.string :baba, null: false
+      t.string :type_id, null: false
       t.string :room, null: false
       t.string :room_fee, null: false
       t.string :common_ff, null: false
-      t.string :area, null: false
+      t.integer :area_id, null: false
       t.string :deposit, null: false
       t.string :money, null: false
       t.string :guarantee, null: false
-      t.string :brokage, null: false
+      t.string :brokerage, null: false
       t.string :insurance, null: false
       t.string :renew, null: false
       t.string :movein, null: false
