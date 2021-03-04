@@ -24,7 +24,7 @@
         </div>
         <div class="main__listing__side__search__area">
           <%= f.label :area_id_in, 'エリア', class:"main__listing__side__search__area__title" %>
-          <%= f.collection_check_boxes :area_id_in, Area.all, :id, :name, class:"main__listing__side__search__area__checkbox" do |b|%>
+          <%= f.collection_check_boxes :area_id_in, Area.all, :id, :name, class:"main__listing__side__search__area__checkbox" do |b| %>
             <div>
               <%= b.check_box %>
               <%= b.label %>
