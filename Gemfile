@@ -62,4 +62,11 @@ gem 'carrierwave'
 gem 'mini_magick' #画像に対して処理を行う場合
 
 gem 'ransack'
+
 gem 'geocoder'
+
+
+gem 'active_hash'
+
+gem 'pry-rails'
+

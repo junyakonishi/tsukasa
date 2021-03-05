@@ -8,15 +8,15 @@ class Item < ApplicationRecord
     validates :name
     validates :catchup
     validates :good
-    validates :baba
+    validates :type_id
     validates :room
     validates :room_fee
     validates :common_ff
-    validates :area
+    validates :area_id
     validates :deposit
     validates :money
     validates :guarantee
-    validates :brokage
+    validates :brokerage
     validates :insurance
     validates :renew
     validates :movein

@@ -4,7 +4,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.string :name, null: false
       t.string :catchup, null: false
       t.text :good, null: false
-      t.string :type_id, null: false
+      t.integer :type_id, null: false
       t.string :room, null: false
       t.string :room_fee, null: false
       t.string :common_ff, null: false
@@ -27,8 +27,10 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.text :specifications, null: false
       t.integer :user_id, null: false, foreign_key: true
       t.string :image, null: false
+
       t.float :latitude
       t.float :longitude
+
 
       t.timestamps
     end

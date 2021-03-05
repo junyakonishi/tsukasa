@@ -3,9 +3,6 @@ class ItemsController < ApplicationController
     @q = Item.ransack(params[:q])
     @items = Item.all
     @itmes = @q.result.includes(:area, :type)
-    # @area = ["高松市市街", "高松市郊外", "香川県西讃", "香川県東讃", "その他県外"]
-    # @type = ["事務所", "店舗", "戸建て", "土地", "倉庫", "一棟ビル", "マンション・アパート", "駐車場"]
-    @area = [{id:1, name:"高松市市街"}]
   end
 
   def new
@@ -13,7 +10,6 @@ class ItemsController < ApplicationController
   end
 
   def create
-    # binding.pry
     @item = Item.new(item_params)
     if @item.valid?
       @item.save
@@ -49,11 +45,16 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name, :catchup, :good, :type_id, :room, :room_fee, :common_ff, :area_id, :deposit, :money, :guarantee, :brokage, :insurance, :renew, :movein, :others ,:address, :traffic, :building_name, :structure, :occupied_area, :number, :year, :specifications, :image).merge(user_id: current_user.id)
+
+    params.require(:item).permit(:name, :catchup, :good, :type_id, :room, :room_fee, :common_ff, :area_id, :deposit, :money, :guarantee, :brokerage, :insurance, :renew, :movein, :others ,:address, :traffic, :building_name, :structure, :occupied_area, :number, :year, :specifications, :image).merge(user_id: current_user.id)
+
   end
 
   def search_params
     params.require(:q).permit!
+
+    
+
   end
 
 end
