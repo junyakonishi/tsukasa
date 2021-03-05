@@ -1,6 +1,6 @@
 class CompaniesController < ApplicationController
   
-  def show
+  def index
   end
 
 end  
