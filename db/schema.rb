@@ -16,9 +16,7 @@ ActiveRecord::Schema.define(version: 2021_03_02_103802) do
     t.string "name", null: false
     t.string "catchup", null: false
     t.text "good", null: false
-
     t.integer "type_id", null: false
-
     t.string "room", null: false
     t.string "room_fee", null: false
     t.string "common_ff", null: false
@@ -41,11 +39,8 @@ ActiveRecord::Schema.define(version: 2021_03_02_103802) do
     t.text "specifications", null: false
     t.integer "user_id", null: false
     t.string "image", null: false
-
     t.float "latitude"
     t.float "longitude"
-
-
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
