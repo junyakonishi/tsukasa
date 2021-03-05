@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :check_login, except:[:index, :show, :search]
   def index
     @q = Item.ransack(params[:q])
     @items = Item.all
@@ -55,8 +56,12 @@ class ItemsController < ApplicationController
   def search_params
     params.require(:q).permit!
 
-    
+  end
 
+  def check_login
+    unless user_signed_in?
+      redirect_to root_path
+    end
   end
 
 end
