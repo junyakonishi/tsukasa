@@ -49,6 +49,9 @@ class ItemsController < ApplicationController
 
   def search_params
     params.require(:q).permit!
+
+    
+
   end
 
 end
