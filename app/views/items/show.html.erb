@@ -17,8 +17,8 @@
         </div>
       </div>
       <div class="Showitem__main__image__left">
-        <%= image_tag "build-image.jpg" %>
-        <%# <%=@item.image%> 
+        <%= image_tag @item.image.url%>
+       
       </div>
     </div>
     <div class="Showitem__main__middle">
@@ -44,7 +44,7 @@
             <%= image_tag "間取り図-image.jpg" %>
           </div>
         </div>
-        <% if user_signed_in? && current_page?(users_items_show_path)%>
+        <% if user_signed_in?%>
         <br><br>
           <%=link_to "編集する", new_contact_path, class:"Showitem__main__middle__left__edit" %>
           <%=link_to "削除する", new_contact_path, class:"Showitem__main__middle__left__delete" %>
@@ -94,8 +94,8 @@
           <script async defer src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyAFP5kPYrI7rhOIIvBmCSs_srXN9DRGvUg&callback=initMap">
           </script>
           <style type="text/css">
-            #map { height: 200px;
-            width: 70%;}
+            #map { height: 425px;
+            width: 565px;}
           </style>
           <div id="map"></div>
           <%# // <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6961.876760040115!2d132.47825969734362!3d34.41531467737127!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355a9f307b02e099%3A0x29ad423e9c11fc6a!2z44CSNzMyLTAwNjIg5bqD5bO255yM5bqD5bO25biC5p2x5Yy654mb55Sw5pep56iy55Sw77yT5LiB55uu77yV!5e0!3m2!1sja!2sjp!4v1614839553741!5m2!1sja!2sjp" width="565" height="425" style="border:0;" allowfullscreen="" loading="lazy"></iframe> %>

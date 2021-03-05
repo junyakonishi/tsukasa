@@ -20,7 +20,6 @@ Rails.application.routes.draw do
     get '/companies', to: 'companies#index'
   
     resources :users
-    get '/users/items/show', to: 'items#show'
 
 
 
