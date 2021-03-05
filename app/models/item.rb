@@ -2,6 +2,8 @@ class Item < ApplicationRecord
   
   belongs_to :user
 
+  geocoded_by :address
+  after_validation :geocode, if: :address_changed?
   mount_uploader :image, ImageUploader
 
   with_options presence: true do
@@ -32,8 +34,5 @@ class Item < ApplicationRecord
     validates :user_id
     validates :image
   end
-
-  geocoded_by :address
-  after_validation :geocode, if: :address_changed?
 
 end
