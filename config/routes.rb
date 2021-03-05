@@ -17,7 +17,7 @@ Rails.application.routes.draw do
   end
   resources :contacts
   resources :companies
-    get '/companies', to: 'companies#show'
+    get '/companies', to: 'companies#index'
   
     resources :users
     get '/users/items/show', to: 'items#show'

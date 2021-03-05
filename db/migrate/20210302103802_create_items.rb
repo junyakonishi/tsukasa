@@ -28,6 +28,10 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.integer :user_id, null: false, foreign_key: true
       t.string :image, null: false
 
+      t.float :latitude
+      t.float :longitude
+
+
       t.timestamps
     end
   end

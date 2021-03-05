@@ -20,6 +20,7 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @item = Item.find(1)
   end
 
   def search
@@ -44,7 +45,9 @@ class ItemsController < ApplicationController
   private
 
   def item_params
+
     params.require(:item).permit(:name, :catchup, :good, :type_id, :room, :room_fee, :common_ff, :area_id, :deposit, :money, :guarantee, :brokerage, :insurance, :renew, :movein, :others ,:address, :traffic, :building_name, :structure, :occupied_area, :number, :year, :specifications, :image).merge(user_id: current_user.id)
+
   end
 
   def search_params
