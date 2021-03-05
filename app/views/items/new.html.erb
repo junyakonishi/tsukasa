@@ -33,18 +33,16 @@
         <%= f.text_area :good, class:"bases__main__second__middle__text", rows:"7", maxlength:"175", placeholder:"商品の説明（必須175文字以内)".html_safe %>
       <p class="bases__main__second__bottom">0/175</p>
       </div>
-
-      <div class="bases__main__second__top">
-        <label class="bases__main__second__top__title">エリア</label>
-        <span class="bases__main__second__top__mark">必須</span>
-        <%= f.collection_select :area_id, Area.all, :id, :name, {prompt:"選択してください"}, {class:"bases__main__second__top__text"} %>
-      </div>
       <div class="bases__main__second__top">
         <label class="bases__main__second__top__title">タイプ</label>
         <span class="bases__main__second__top__mark">必須</span>
-        <%= f.collection_select :type_id, Type.all, :id, :name, {prompt:"選択してください"}, {class:"bases__main__second__top__text"} %>
+        <%= f.text_field :type_id, class:"bases__main__second__top__text", placeholder:"３０文字まで" %>
       </div>
-      
+      <div class="bases__main__second__top">
+        <label class="bases__main__second__top__title">募集部屋</label>
+        <span class="bases__main__second__top__mark">必須</span>
+        <%= f.text_field :room, class:"bases__main__second__top__text", placeholder:"３０文字まで" %>
+      </div>
       <div class="bases__main__second__top">
         <label class="bases__main__second__top__title">賃料</label>
         <span class="bases__main__second__top__mark">必須</span>
@@ -104,7 +102,7 @@
       <div class="bases__main__second__top">
         <label class="bases__main__second__top__title">所在地</label>
         <span class="bases__main__second__top__mark">必須</span>
-        <%= f.text_field :room, class:"bases__main__second__top__text", placeholder:"３０文字まで" %>
+        <%= f.text_field :area_id, class:"bases__main__second__top__text", placeholder:"３０文字まで" %>
       </div>
       <div class="bases__main__second__middle">
         <label class="bases__main__second__middle__title">交通</label>
