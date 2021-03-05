@@ -34,9 +34,14 @@
       <p class="bases__main__second__bottom">0/175</p>
       </div>
       <div class="bases__main__second__top">
+        <label class="bases__main__second__top__title">エリア</label>
+        <span class="bases__main__second__top__mark">必須</span>
+        <%= f.collection_select :area_id, Area.all, :id, :name, {prompt:"選択してください"}, {class:"bases__main__second__top__text"} %>
+      </div>
+      <div class="bases__main__second__top">
         <label class="bases__main__second__top__title">タイプ</label>
         <span class="bases__main__second__top__mark">必須</span>
-        <%= f.text_field :type_id, class:"bases__main__second__top__text", placeholder:"３０文字まで" %>
+        <%= f.collection_select :type_id, Type.all, :id, :name, {prompt:"選択してください"}, {class:"bases__main__second__top__text"} %>
       </div>
       <div class="bases__main__second__top">
         <label class="bases__main__second__top__title">募集部屋</label>
@@ -158,7 +163,3 @@
   <% end %>
 </div>
 <%= render 'layouts/footer' %>
-
-
-
-
