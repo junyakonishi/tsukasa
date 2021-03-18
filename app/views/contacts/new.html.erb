@@ -1,6 +1,7 @@
-<div class="bar">
+<%= render 'layouts/header' %>
+<%# <div class="bar">
   <h2>Inquiry</h2>
-</div>
+</div> %>
 <div class="inquirypage">
   <%= form_with class:"inquirypage__main", local: true do |f| %>
     <div class="inquirypage__main__text">
@@ -32,3 +33,4 @@
     </div>
   <%end%>
 </div>
+<%= render 'layouts/footer'%>

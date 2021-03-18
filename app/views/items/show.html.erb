@@ -46,8 +46,8 @@
         </div>
         <% if user_signed_in?%>
         <br><br>
-          <%=link_to "編集する", new_contact_path, class:"Showitem__main__middle__left__edit" %>
-          <%=link_to "削除する", new_contact_path, class:"Showitem__main__middle__left__delete" %>
+          <%=link_to "編集する", edit_item_path(@item.id), class:"Showitem__main__middle__left__edit" %>
+          <%=link_to "削除する", item_path(@item), method: :delete, class:"Showitem__main__middle__left__delete" %>
         <%end%>
       </div>
       <div class="Showitem__main__middle__right">
